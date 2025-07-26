@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services | Nirah Ngala</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Space Mono', monospace;
+      background-color: #0f0f11;
+      color: #fff;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #0f0f11;
+      border-bottom: 1px solid #222;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    .logo span {
+      color: #64ff9c;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    nav a.active,
+    nav a:hover {
+      color: #64ff9c;
+      border-bottom: 2px solid #64ff9c;
+    }
+
+    .contact-btn {
+      padding: 8px 16px;
+      background: #64ff9c;
+      border-radius: 20px;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .services {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .services h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .services p {
+      color: #999;
+      margin-bottom: 40px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: #1a1a1f;
+      border-radius: 12px;
+      padding: 30px 20px;
+      border: 1px solid #222;
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #64ff9c;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .card .tag {
+      font-size: 0.75rem;
+      padding: 2px 6px;
+      margin-left: 8px;
+      background: #333;
+      border-radius: 4px;
+    }
+
+    .tag.popular {
+      background: #64ff9c;
+      color: #000;
+    }
+
+    .tag.premium {
+      background: #ff0080;
+      color: #fff;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #64ff9c;
+      margin: 10px 0 20px;
+    }
+
+    .card ul {
+      text-align: left;
+      color: #aaa;
+      padding-left: 0;
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .card ul li {
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      color: #64ff9c;
+      border: 1px solid #64ff9c;
+      text-decoration: none;
+      border-radius: 20px;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #64ff9c;
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Nirah Ngala<span>.</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+    <a href="contactme.html" class="contact-btn">Contact Me</a>
+  </header>
+
+  <section class="services">
+    <h2>Professional Solutions</h2>
+    <p>Tailored packages for your personal or business needs</p>
+
+    <div class="card-grid">
+      <!-- Static Website -->
+      <div class="card">
+        <h3>Static Website <span class="tag">Basic</span></h3>
+        <p class="price">From KES 100,000+</p>
+        <ul>
+          <li>✔ Free Domain Name</li>
+          <li>✔ Website Security</li>
+          <li>✔ Lifetime Hosting</li>
+          <li>✔ 1-5 Pages</li>
+          <li>✔ SEO Optimized</li>
+          <li>✔ 24/7 Support</li>
+        </ul>
+        <a href="#" class="btn">Get Started ↗</a>
+      </div>
+
+      <!-- E-commerce -->
+      <div class="card highlight">
+        <h3>E-commerce <span class="tag popular">Popular</span></h3>
+        <p class="price">From KES 250,000+</p>
+        <ul>
+          <li>✔ Store Design</li>
+          <li>✔ MPESA & Card Payments</li>
+          <li>✔ Admin Dashboard</li>
+          <li>✔ SEO & Analytics</li>
+          <li>✔ 24/7 Support</li>
+        </ul>
+        <a href="#" class="btn">Get Started ↗</a>
+      </div>
+
+      <!-- Mobile App -->
+      <div class="card">
+        <h3>Mobile App <span class="tag premium">Premium</span></h3>
+        <p class="price">From KES 350,000+</p>
+        <ul>
+          <li>✔ Native Android/iOS</li>
+          <li>✔ Push Notifications</li>
+          <li>✔ API Integration</li>
+          <li>✔ Realtime Sync</li>
+          <li>✔ Store Deployment</li>
+        </ul>
+        <a href="#" class="btn">Get Started ↗</a>
+      </div>
+
+      <!-- Dynamic Website -->
+      <div class="card">
+        <h3>Dynamic Website</h3>
+        <p class="price">From KES 180,000+</p>
+        <ul>
+          <li>✔ CMS Integration</li>
+          <li>✔ Database Management</li>
+          <li>✔ Auto Backups</li>
+          <li>✔ User Management</li>
+          <li>✔ Custom Design</li>
+        </ul>
+        <a href="#" class="btn">Get Started ↗</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
