@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #0e0e0e;
+      font-family: 'Space Mono', monospace;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .contact-section {
+      max-width: 700px;
+      margin: 100px auto;
+      padding: 40px;
+      background-color: #121212;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 255, 128, 0.1);
+    }
+    .contact-section h1 {
+      font-size: 36px;
+      color: #00ff99;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 15px;
+      background: #1e1e1e;
+      border: 1px solid #00ff99;
+      color: white;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .contact-form button {
+      padding: 15px;
+      background-color: #00ff99;
+      border: none;
+      color: #0e0e0e;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      border-radius: 5px;
+    }
+    .contact-form button:hover {
+      background-color: #00cc7a;
+    }
+    .contact-details {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #aaa;
+    }
+    .social-icons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .social-icons a {
+      color: #00ff99;
+      font-size: 20px;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #00cc7a;
+    }
+    .success-message {
+      text-align: center;
+      color: #00ff99;
+      margin-top: 20px;
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .contact-section {
+        margin: 50px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="contact-section">
+    <h1>Contact Me</h1>
+    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xdkdgped" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="success-message" id="successMessage">Message sent successfully!</div>
+    <div class="contact-details">
+      Or email me directly at <strong>nirahngalaa@gmail.com</strong>
+      <div class="social-icons">
+         <a href="https://x.com/Nirah_Ngala" target="_blank" title="X / Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/NirahNgala" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://wa.me/+254745299281" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </section>
+  <script>
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        successMessage.style.display = 'block';
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>
