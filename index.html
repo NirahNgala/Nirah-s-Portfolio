@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nirah | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --primary: #00ff99;
+      --bg: #0f0f10;
+      --text: #ffffff;
+      --card: #1a1a1d;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Space Mono', monospace;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 5%;
+    }
+
+    header h1 {
+      color: var(--primary);
+    }
+
+    nav a {
+      color: var(--text);
+      margin-left: 20px;
+      text-decoration: none;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .cta-button {
+      background: var(--primary);
+      color: var(--bg);
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 60px 5% 40px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+    }
+
+    .hero-name {
+      color: var(--primary);
+    }
+
+    .bio {
+      max-width: 600px;
+      margin: 20px 0;
+    }
+
+    .buttons {
+      margin: 20px 0;
+    }
+
+    .buttons a {
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin: 0 5px;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .social-icons i {
+      color: var(--primary);
+      font-size: 1.2rem;
+      margin: 10px;
+    }
+
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .hero-left {
+      flex: 1;
+      padding-right: 20px;
+    }
+
+    .hero-right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-img {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+  
+      padding: 10px;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-left, .hero-right {
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nirah Ngala.</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="services.html">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="contactme.html" class="cta-button">Contact Me</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-left">
+        <p>Web Developer</p>
+        <h2>Hello, I'm <span class="hero-name">Nirah Ngala</span></h2>
+        <p class="bio">
+          I build modern digital solutions that solve real-world problems and elevate user experience. I'm passionate about web tech, design, and clean code.
+        </p>
+        <div class="buttons">
+          <a href="#">PROOF OF CONCEPT <i class="fas fa-download"></i></a>
+        </div>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="gpt-removebg-preview.png" alt="Nirah" class="profile-img">
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-number">3</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">2</div>
+        <div class="stat-label">Years of Experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">4</div>
+        <div class="stat-label">Technologies Mastered</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">100</div>
+        <div class="stat-label">Code Commits</div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
